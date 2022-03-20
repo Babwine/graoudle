@@ -43,7 +43,7 @@ export class LgRoles {
     public static VIEUX_SAGE                = new LgRole('Vieux Sage', LgTeam.VILLAGE, LgAura.LUMINEUSE, [], "#7A5D5D", false, false);
     public static ESPION                    = new LgRole('Espion', LgTeam.VILLAGE, LgAura.NEUTRE, [], "#3D3A3B", true, false);
 
-    public static PETITE_FILLE              = new LgRole('Petite Fille', LgTeam.VILLAGE, LgAura.NEUTRE, [LgEffect.WEAKNESS, LgEffect.INVISIBILITY], "#774C72", false, true);
+    public static PETITE_FILLE              = new LgRole('Petite Fille', LgTeam.VILLAGE, LgAura.NEUTRE, [LgEffect.NIGHT_VISION], "#774C72", false, true);
 
     public static ASSASSIN                  = new LgRole('Assassin', LgTeam.AUTRES, LgAura.OBSCURE, [LgEffect.STRENGTH], "#DC143C", false, true);
 
