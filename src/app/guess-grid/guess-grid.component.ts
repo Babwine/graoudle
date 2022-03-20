@@ -2,7 +2,10 @@ import { Component, Input, OnInit, ɵnoSideEffects } from '@angular/core';
 import { throwError } from 'rxjs';
 import { LgRoleCheck } from '../models/lg-role-check.model';
 import { LgRole } from '../models/lg-role.model';
+import { LgAura } from '../static/lg-aura.static';
+import { LgEffect } from '../static/lg-effect.static';
 import { LgRoles } from '../static/lg-role.static';
+import { LgTeam } from '../static/lg-team.static';
 import { TimeCycle } from '../static/lg-time-cycle.static';
 import { LgUtils } from '../static/lg-utils.static';
 
@@ -28,6 +31,9 @@ export class GuessGridComponent implements OnInit {
   ngOnInit(): void {
     this.guessables = LgRoles.LISTE_ALL_ROLES;
     let rand = Math.floor(Math.random() * (Math.floor(this.guessables.length) - Math.ceil(0))) + Math.ceil(0);
+    /*for (let role of this.guessables) {
+      if (role.name === 'Loup-Garou Feutré') this.toGuess = role;
+    }*/
     this.toGuess = this.guessables[rand];
     this.guessedMapList = [];
     this.guessedInfosMap = new Map();
@@ -40,6 +46,8 @@ export class GuessGridComponent implements OnInit {
     let theGuessed = box.value;
     let exists = false;
     for (let guessable of this.guessables) {
+      if (guessable.name === 'Loup-Garou Feutré') guessable = this.manageLGFeutreBack(guessable);
+      if (guessable.name === 'Loup-Garou Feutré') guessable = this.manageLGFeutre(guessable);
       if (guessable.name.toUpperCase() === theGuessed.toUpperCase()) {
         this.roleExists = true;
         this.guessedName = theGuessed;
@@ -133,5 +141,27 @@ export class GuessGridComponent implements OnInit {
       }
       this.time = TimeCycle.DAY;
     }
+  }
+
+  manageLGFeutre(role: LgRole): LgRole {
+    let rand = Math.floor(Math.random() * (Math.floor(this.guessables.length) - Math.ceil(0))) + Math.ceil(0);
+    role.team = this.guessables[rand].team;
+    role.aura = this.guessables[rand].aura;
+    role.effects = [];
+    for (let eff of (this.guessables[rand].effects)) {
+      role.effects.push(eff);
+    }
+    role.commands = this.guessables[rand].commands;
+    role.items = this.guessables[rand].items;
+    return role;
+  }
+
+  manageLGFeutreBack(role: LgRole): LgRole {
+    role.team = LgTeam.LOUPS_GAROUS;
+    role.aura = LgAura.OBSCURE;
+    role.effects = (this.time === 'day' ? [LgEffect.NIGHT_VISION] : [LgEffect.NIGHT_VISION, LgEffect.STRENGTH]);
+    role.commands = false;
+    role.items = false;
+    return role;
   }
 }
