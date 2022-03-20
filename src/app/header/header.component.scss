@@ -13,15 +13,26 @@ a {
     height: 7%;
 }
 
-#header > button {
+#header > #popup {
     position: absolute;
-    right: 3%;
+    right: 6%;
     top: 2%;
     background-color: #b13438;
     padding: 10px 10px 8px 10px;
     border: 1px double #1e1e1e;
     border-radius: 50%;
     cursor: pointer;
+}
+
+#header > #popup2 {
+  position: absolute;
+  right: 3%;
+  top: 2%;
+  background-color: #b13438;
+  padding: 10px 10px 8px 10px;
+  border: 1px double #1e1e1e;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 #header > * {
@@ -90,4 +101,8 @@ a {
   .caracteristique {
       font-weight: bold;
       color: #ddbc00;
+  }
+
+  ul {
+    list-style-type: none;
   }

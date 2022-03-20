@@ -1,7 +1,11 @@
 <div id="header">
         
         <img src="assets/images/graoudle.png" width="50" height="50"/> <h1>raoudle</h1>
-        <button title="Aide" type="button"(click)="popup = true">
+
+        <button id="popup" title="Rôles" type="button"(click)="popup2 = true">
+                <img src="assets/images/roles.png" alt="Rôles"/>
+        </button>
+        <button id="popup2" title="Aide" type="button"(click)="popup = true">
                 <img src="assets/images/help.png" alt="Aide"/>
         </button>
                
@@ -46,6 +50,20 @@
                                 <span [ngStyle]="{ color: 'goldenrod'}">partiellement identique</span> ou <span [ngStyle]="{ color: '#48A548'}">identique</span> à la caractéristique
                                 correspondante du rôle à deviner.
                         </p>
+                </div>
+                </div>
+        </div>
+
+        <div class="overlay" *ngIf="popup2">
+                <div class="popup">
+                <h2>Liste des rôles</h2>
+                <a class="close" (click)="popup2 = false">&times;</a>
+                <div class="content">
+                        <ul>
+                                <li *ngFor="let role of roles">
+                                        {{role.name}}
+                                </li>
+                        </ul>
                 </div>
                 </div>
         </div>
