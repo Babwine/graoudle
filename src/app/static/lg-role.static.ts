@@ -28,6 +28,21 @@ export class LgRoles {
     public static VOYANTE                   = new LgRole('Voyante', LgTeam.VILLAGE, LgAura.LUMINEUSE, [LgEffect.NIGHT_VISION], "#9713B0", true, true);
     public static ORACLE                    = new LgRole('Oracle', LgTeam.VILLAGE, LgAura.NEUTRE, [LgEffect.NIGHT_VISION], "#2F13B0", true, false);
     public static PRETRESSE                 = new LgRole('Prêtresse', LgTeam.VILLAGE, LgAura.LUMINEUSE, [], "#AF8E50", true, true);
+    public static DETECTIVE                 = new LgRole('Détective', LgTeam.VILLAGE, LgAura.NEUTRE, [], "#C1C8FF", true, false);
+    public static FOSSOYEUR                 = new LgRole('Fossoyeur', LgTeam.VILLAGE, LgAura.OBSCURE, [], "#442F28", true, false);
+    public static CHAMAN                    = new LgRole('Chaman', LgTeam.VILLAGE, LgAura.NEUTRE, [], "#316B31", true, false);
+    public static JUMEAU                    = new LgRole('Jumeau', LgTeam.VILLAGE, LgAura.LUMINEUSE, [], "#66A59F", true, false);
+    public static CONTEUSE                  = new LgRole('Conteuse', LgTeam.VILLAGE, LgAura.LUMINEUSE, [], "#A39361", false, true);
+    public static ANALYSTE                  = new LgRole('Analyste', LgTeam.VILLAGE, LgAura.LUMINEUSE, [], "#001870", true, false);
+    public static ASTRONOME                 = new LgRole('Analyste', LgTeam.VILLAGE, LgAura.OBSCURE, [LgEffect.NIGHT_VISION], "#000D3F", true, true);//GERER LA NUIT AURA
+    public static AUBERGISTE                = new LgRole('Aubergiste', LgTeam.VILLAGE, LgAura.LUMINEUSE, [], "#36373D", true, false);
+    public static DRUIDE                    = new LgRole('Druide', LgTeam.VILLAGE, LgAura.OBSCURE, [], "#0B3A0C", true, false);
+    public static MARCHANDE_DE_FRUITS       = new LgRole('Marchande de Fruits', LgTeam.VILLAGE, LgAura.LUMINEUSE, [], "#721F08", true, false);
+    public static OCCULTISTE                = new LgRole('Occultiste', LgTeam.VILLAGE, LgAura.OBSCURE, [], "#261D24", false, false);
+    public static VAUDOUISTE                = new LgRole('Vaudouiste', LgTeam.VILLAGE, LgAura.OBSCURE, [], "#231919", true, false);
+    public static VIEUX_SAGE                = new LgRole('Vieux Sage', LgTeam.VILLAGE, LgAura.LUMINEUSE, [], "#7A5D5D", false, false);
+    public static ESPION                    = new LgRole('Espion', LgTeam.VILLAGE, LgAura.NEUTRE, [], "#3D3A3B", true, false);
+
     public static PETITE_FILLE              = new LgRole('Petite Fille', LgTeam.VILLAGE, LgAura.NEUTRE, [LgEffect.WEAKNESS, LgEffect.INVISIBILITY], "#774C72", false, true);
 
     public static ASSASSIN                  = new LgRole('Assassin', LgTeam.AUTRES, LgAura.OBSCURE, [LgEffect.STRENGTH], "#DC143C", false, true);
@@ -50,13 +65,27 @@ export class LgRoles {
         LgRoles.LOUP_GAROU_SANGUINAIRE,
         LgRoles.LOUP_GAROU_TENEBREUX,
 
-
         LgRoles.SIMPLE_VILLAGEOIS,
         LgRoles.MONTREUR_D_OURS,
         LgRoles.RENARD,
         LgRoles.VOYANTE,
         LgRoles.ORACLE,
         LgRoles.PRETRESSE,
+        LgRoles.DETECTIVE,
+        LgRoles.FOSSOYEUR,
+        LgRoles.CHAMAN,
+        LgRoles.JUMEAU,
+        LgRoles.CONTEUSE,
+        LgRoles.ANALYSTE,
+        LgRoles.AUBERGISTE,
+        LgRoles.DRUIDE,
+        LgRoles.MARCHANDE_DE_FRUITS,
+        LgRoles.OCCULTISTE,
+        LgRoles.VAUDOUISTE,
+        LgRoles.VIEUX_SAGE,
+        LgRoles.ESPION,
+        LgRoles.PETITE_FILLE,
+
 
         LgRoles.ASSASSIN
     ]
