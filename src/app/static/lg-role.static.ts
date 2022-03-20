@@ -77,6 +77,7 @@ export class LgRoles {
         LgRoles.JUMEAU,
         LgRoles.CONTEUSE,
         LgRoles.ANALYSTE,
+        LgRoles.ASTRONOME,
         LgRoles.AUBERGISTE,
         LgRoles.DRUIDE,
         LgRoles.MARCHANDE_DE_FRUITS,
