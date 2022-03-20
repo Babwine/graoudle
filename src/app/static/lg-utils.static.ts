@@ -29,7 +29,7 @@ export class LgUtils {
 
     static translateEffects(effects: LgEffect[]): string {
         if (effects.length === 0) {
-            return "";
+            return "<img src='assets/images/NON.png' alt='aucun'/>";
         } else {
             let results = "";
             for (let effect of effects) {
