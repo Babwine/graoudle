@@ -34,7 +34,7 @@ export class LgRoles {
     public static JUMEAU                    = new LgRole('Jumeau', LgTeam.VILLAGE, LgAura.LUMINEUSE, [], "#66A59F", true, false);
     public static CONTEUSE                  = new LgRole('Conteuse', LgTeam.VILLAGE, LgAura.LUMINEUSE, [], "#A39361", false, true);
     public static ANALYSTE                  = new LgRole('Analyste', LgTeam.VILLAGE, LgAura.LUMINEUSE, [], "#001870", true, false);
-    public static ASTRONOME                 = new LgRole('Analyste', LgTeam.VILLAGE, LgAura.OBSCURE, [LgEffect.NIGHT_VISION], "#000D3F", true, true);//GERER LA NUIT AURA
+    public static ASTRONOME                 = new LgRole('Astronome', LgTeam.VILLAGE, LgAura.OBSCURE, [LgEffect.NIGHT_VISION], "#000D3F", true, true);//GERER LA NUIT AURA
     public static AUBERGISTE                = new LgRole('Aubergiste', LgTeam.VILLAGE, LgAura.LUMINEUSE, [], "#36373D", true, false);
     public static DRUIDE                    = new LgRole('Druide', LgTeam.VILLAGE, LgAura.OBSCURE, [], "#0B3A0C", true, false);
     public static MARCHANDE_DE_FRUITS       = new LgRole('Marchande de Fruits', LgTeam.VILLAGE, LgAura.LUMINEUSE, [], "#721F08", true, false);
