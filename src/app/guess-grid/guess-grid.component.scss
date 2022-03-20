@@ -1,0 +1,145 @@
+
+#grid {
+    background: rgb(30,30,30);
+    color: white;
+    line-height: 50px;
+    padding: 20px 20px;
+    text-align: center;
+    height: 80%;
+    overflow: auto;
+    overflow-x: hidden;
+    table-layout:fixed;
+}
+
+
+#grid * {
+    color: white;
+    line-height: 50px;
+    padding: 0 0;
+    text-align: center;
+}
+
+
+#grid input {
+    margin-top: 10px;
+    background: rgb(10,0,0);
+    padding: 0;
+    border: 1px solid white;
+    min-width: 30%;
+}
+
+#grid table {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 50%;
+    border-collapse: collapse;
+}
+
+#grid td.property {
+    padding: 15px 15px 0 15px;
+    min-width: 10%;
+    min-height: 10%;
+}
+
+#grid #entete > td {
+    background: rgb(50,0,0);
+}
+
+#grid #entete > td#time {
+    background: none;
+    border: none;
+    background: rgb(10,10,10, 0.3);
+}
+
+#grid .time {
+    background: none;
+    border: none;
+    background: rgb(10,10,10, 0.3);
+}
+
+
+#grid #gg {
+    background: rgb(170,130,0);  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    border: 2px solid black;
+}
+
+#grid #nope {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#grid td {
+    padding: 10px 10px;
+    border: 1px solid black;
+    min-width: 10%;
+    min-height: 10%;
+}
+
+#grid > * {
+    width: 50%;
+    align-items: center;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 30%;
+    width: 100%;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+  visibility: visible;
+    opacity: 1;
+  }
+
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+    cursor: pointer;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+  
+    .popup{
+      width: 70%;
+    }
+  }

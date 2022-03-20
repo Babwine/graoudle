@@ -1,0 +1,52 @@
+<div id="header">
+        
+        <img src="assets/images/graoudle.png" width="50" height="50"/> <h1>raoudle</h1>
+        <button title="Aide" type="button"(click)="popup = true">
+                <img src="assets/images/help.png" alt="Aide"/>
+        </button>
+               
+               
+        <div class="overlay" *ngIf="popup">
+                <div class="popup">
+                <h2>Règles de Graoudle</h2>
+                <a class="close" (click)="popup = false">&times;</a>
+                <div class="content">
+                        <p>
+                                Ce jeu est l'équivalent d'un <a href="https://wordle.louan.me">Wordle</a> nuancé à la sauce de 
+                                <a href="https://squirdle.fireblend.com/daily.html">Squirdle</a>, dont le but est de trouver un Pokémon 
+                                en ayant non pas des indices sur son nom, mais sur ses caractéristiques.
+                        </p>
+
+                        <p>
+                                L'objectif du jeu Graoudle est de faire deviner non pas des mots, ou des Pokémon, mais
+                                des rôles du mode de jeu <a href="https://docs.google.com/document/d/1B7ABaHfwBEndOGCR9zt9F3dpuCDNBUFAi6yyr0RoJ90/edit#heading=h.16owhxabn3l3">Loups-Garous UHC</a> 
+                                sur Minecraft, développé à l'origine par <a href="https://twitter.com/Mathieu_Lapin">Mathieulapin</a>.
+                        </p>
+
+                        <p>À l'instant où vous faites une tentative, cinq informations s'affichent sur le rôle : 
+                                le <span class="caracteristique">camp</span> <img src="assets/images/loups_garous.png" width="16px" height="16px"/> auquel appartient le rôle à cet instant, 
+                                l'<span class="caracteristique">aura</span> <img src="assets/images/lumineuse.png" width="16px" height="16px"/> que le rôle possède à cet instant, 
+                                les <span class="caracteristique">effets</span> <img src="assets/images/speed.png" width="16px" height="16px"/> <img src="assets/images/strength.png" width="16px" height="16px"/> 
+                                que le rôle possède à cet instant, si le rôle peut utiliser une/des <span class="caracteristique">commande(s)</span> au cours de la partie et enfin s'il reçoit des 
+                                <span class="caracteristique">items</span> au cours de la partie <img src="assets/images/OUI.png" width="16px" height="16px"/>
+                                 <img src="assets/images/NON.png" width="16px" height="16px"/>.
+                        </p>
+
+                        <p>
+                                Des évènements peuvent changer ces caractéristiques au cours d'une partie de Graoudle, tels que le déroulement cycle jour-nuit : à chaque tentative,
+                                le cycle avance entre jour et nuit.
+                        </p>
+
+                        <p>
+                                L'ensemble des rôles que l'on peut deviner est affiché sur le côté. Il faut taper le nom entier du rôle (on ignore les majuscules).
+                        </p>
+
+                        <p>
+                                La couleur de la case correspondant à la caractéristique indique si cette caractéristique est <span [ngStyle]="{ color: '#A53133'}">différente</span>,
+                                <span [ngStyle]="{ color: 'goldenrod'}">partiellement identique</span> ou <span [ngStyle]="{ color: '#48A548'}">identique</span> à la caractéristique
+                                correspondante du rôle à deviner.
+                        </p>
+                </div>
+                </div>
+        </div>
+</div>

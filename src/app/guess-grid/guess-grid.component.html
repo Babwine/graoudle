@@ -1,0 +1,33 @@
+<div id="grid" [ngStyle]="{ backgroundColor: (time === 'day' ? '#A8FDFF' : 'rgb(30,30,30)') }">
+    
+<app-lg-composition id="sidecompo" [ngStyle]="{ backgroundColor: (time === 'day' ? '#A8FDFF' : 'rgb(30,30,30)'), color: (time === 'day' ? 'black' : 'white') }"></app-lg-composition>
+<div></div>    
+<table id="theTable">
+        <tr id="entete" *ngIf="guessedMapList.length > 0">
+            <td>Rôle</td>
+            <td>Camp</td>
+            <td>Aura</td>
+            <td>Effets</td>
+            <td>Commandes</td>
+            <td>Items</td>
+            <td class="time" id="time"><img src="assets/images/watch.gif" width="32px" height="32px" alt="time"/></td>
+        </tr>
+        <tr *ngFor="let guessedMap of guessedMapList">
+            <td [ngStyle]="{ backgroundColor: guessedMap.get('color').value }">{{guessedMap.get("name").value}}</td>
+            <td class="property" [ngStyle]="{ backgroundColor: (guessedMap.get('team').check ? '#48A548' : '#A53133') }" [innerHTML]="guessedMap.get('team').value"></td>
+            <td class="property" [ngStyle]="{ backgroundColor: (guessedMap.get('aura').check ? '#48A548' : '#A53133') }" [innerHTML]="guessedMap.get('aura').value"></td>
+            <td class="property" [ngStyle]="{ backgroundColor: this.translateColor(guessedMap.get('effects').check) }" [innerHTML]="guessedMap.get('effects').value"></td>
+            <td class="property" [ngStyle]="{ backgroundColor: (guessedMap.get('commands').check ? '#48A548' : '#A53133') }" [innerHTML]="guessedMap.get('commands').value"></td>
+            <td class="property" [ngStyle]="{ backgroundColor: (guessedMap.get('items').check ? '#48A548' : '#A53133') }" [innerHTML]="guessedMap.get('items').value"></td>
+            <td class="time" [ngStyle]="{ border: 0 }" [innerHTML]="(guessedMap.get('time').check === 'day' 
+            ? '\<img src=\'assets/images/day.png\' width=\'32px\' height=\'32px\'/>' 
+            : '\<img src=\'assets/images/night.png\' width=\'32px\' height=\'32px\'/>')">
+        </td>
+        </tr>
+    </table>
+    <input autoComplete="off" *ngIf="!found" id="input" placeholder="Saisissez un rôle à deviner" #box (keyup.enter)="onKey(box)">
+    <div id="nope" *ngIf="!roleExists" [ngStyle]="{ color: (time === 'day' ? 'black' : 'white') }" >Ce rôle n'existe pas !</div>
+    <div id="gg" *ngIf="found">GG ! Vous avez trouvé le rôle {{toGuess.name}} en {{guessedMapList.length}} essai{{(guessedMapList.length === 1 ? '' : 's')}} !</div>
+
+    
+</div>

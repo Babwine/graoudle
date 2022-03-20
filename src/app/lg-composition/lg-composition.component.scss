@@ -1,0 +1,28 @@
+#compo table {
+    width: 30%;
+    line-height: 100%;
+    text-align: right;
+    position: fixed;
+    right: 2%;
+}
+
+#compo table {
+    max-width: 15%;
+    border-right: #b13438 5px solid;
+}
+
+
+#sidecompo > * {
+    right: 0;
+    color: red;
+}
+
+#compo .entete {
+    font-size: 2em;
+    color: #c8696e ;
+}
+
+#compo .entete td {
+    padding: 5%;
+    border-bottom: 1px #b13438 solid;
+}
