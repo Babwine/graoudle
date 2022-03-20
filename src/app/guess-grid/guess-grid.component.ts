@@ -48,7 +48,7 @@ export class GuessGridComponent implements OnInit {
     for (let guessable of this.guessables) {
       if (guessable.name === 'Loup-Garou Feutré') guessable = this.manageLGFeutreBack(guessable);
       if (guessable.name === 'Loup-Garou Feutré') guessable = this.manageLGFeutre(guessable);
-      if (guessable.name.toUpperCase() === theGuessed.toUpperCase()) {
+      if (guessable.name.toUpperCase() === theGuessed.toUpperCase().trim()) {
         this.roleExists = true;
         this.guessedName = theGuessed;
         this.pickGuess(guessable);
